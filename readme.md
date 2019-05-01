@@ -1,4 +1,4 @@
-#SmartCity project
+# SmartCity project
 
 ## Workflow for building web application
 
@@ -19,7 +19,7 @@
 ## Global dependencies
 You must have installed: `node`, `npm`, `gulp`.
 
-##How to work with this project
+## How to work with this project
 
 1. `git clone https://github.com/ChuVo/SmartCity.git`
 2. `cd SmartCity`
