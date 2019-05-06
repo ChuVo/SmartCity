@@ -1,0 +1,99 @@
+.header {
+  align-items: center;
+  box-shadow: 0px 4px 8px rgba(153, 177, 195, 0.08);
+  display: flex;
+  justify-content: space-between;
+  height: 4.8rem;
+  position: relative;
+  width: 100%;
+  
+
+
+  &__left-side {
+    margin-left: 3rem;
+
+    @media (max-width: 900px) {
+      margin-left: 6rem;
+    }
+  }
+
+  &__text {
+    color: blue;
+  }
+
+  &__right-side {
+    margin-right: 3rem;
+  }
+}
+
+
+.button {
+  background: transparent;
+  border: none;
+  position: relative;
+
+  &:hover {
+    color: blue;
+  }
+   
+  &-company {
+    border-right: 1px solid gray;
+    padding-right: 1.8rem;
+
+    @media (max-width: 400px) {
+      padding-right: .8rem;
+    }
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
+  &-sing {
+    color: gray;
+    margin: 0 3rem 0 1.8rem;
+
+    @media (max-width: 800px) {
+      font-size: 0;
+      margin: 0 2rem 0 0;
+    }
+  }
+
+  &-company::before,
+  &-sing::before {
+    content: "";
+    display: block;
+    position: absolute;
+    size: 2.3rem;
+  }
+
+  &-company::before {    
+    background: url(../images/compan-icon-defolt.svg) center no-repeat;
+    background-size: contain;
+    left: -3rem;
+    top: -50%;  
+    
+    @media (max-width: 800px) {
+      top: -20%;
+    }
+
+    @media (max-width: 400px) {
+      left: -2.5rem;
+      size: 2rem;
+      top: -10%;
+    }
+  }
+
+  &-sing::before {    
+    background: url(../images/off-icon.png) center no-repeat;
+    background-size: contain;
+    right: -3rem;
+    top: -50%;
+
+    @media (max-width: 800px) {
+      top: -1.75rem;
+    }
+  }
+
+
+}

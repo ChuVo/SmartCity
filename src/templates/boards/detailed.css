@@ -1,0 +1,117 @@
+.detailed {
+  display: none;
+  color: black;
+  justify-content: center;
+  width: 100%;
+
+  @media ( max-width: 700px) {
+    display: none;
+
+  }
+
+  &--open {
+    display: flex;
+
+    @media ( max-width: 700px) {
+      display: block;
+  
+    }
+  }
+
+  &__info {
+    max-width: 56rem;
+    box-shadow: 1px 1px 3px rgb(124, 111, 111);
+    margin-right: 1.6rem;
+
+    @media (max-width: 700px) {
+      margin: 0;
+      margin-bottom: 1.6rem;
+      max-width: 100%;
+    }
+  }
+
+  &__make {
+    background: white;
+    box-shadow: 1px 1px 3px rgb(124, 111, 111);
+    padding: 2.4rem;
+    border-radius: .5rem;
+    max-width: 30rem;
+  }
+}
+
+.info {
+  display: flex;
+  flex-direction: column;
+  background: white;
+  justify-content: space-around;
+  padding: 2.4rem;
+  border-radius: .5rem;
+
+  &__wrap {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 3rem;
+    width: 100%;
+
+    &:nth-last-child(1) {
+      margin-bottom: 0;
+    }
+
+    &-rison {
+      border: 1px solid rgba(188, 83, 121, 0.6);
+      box-sizing: border-box;
+      border-radius: 4px;
+      justify-content: center;
+      padding: .8rem 2rem;
+      width: auto;
+    }
+  }
+  
+  &__button {
+      background: linear-gradient(360deg, #5C96F8 50%, #124EB4 175%);
+      border: none;
+      border-radius: 2rem;
+      box-shadow: 0px 4px 4px rgba(156, 192, 249, 0.4);
+      color: white;
+      font-size: 1.2rem;
+      padding: .8rem 2.5rem;
+      text-transform: uppercase;
+
+      &:hover {
+        color: aqua;
+        background: linear-gradient(90deg, #5C96F8 80%, #124EB4 205%);
+      }
+
+      &:active {
+        transform: translateY(1px);
+      }
+    }
+
+  &__rison {
+    color: blue;
+    margin-left: .8rem;
+  }
+
+  &__title {
+    font-size: 1.8rem;
+    font-weight: bold;
+  }
+
+  &__direction {
+    color: blue;
+  }
+
+  &__data-wrap {
+  }
+
+  &__data-title {
+    color: gray;
+    font-size: 1.2rem;
+    width: 100%;
+  }
+
+  &__data {
+    font-size: 1.6rem;
+    font-weight: bold;
+  }
+}

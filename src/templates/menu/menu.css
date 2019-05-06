@@ -1,0 +1,155 @@
+.menu__icon {
+  border: 2px solid blue;
+  border-radius: 50%;
+  align-items: center;
+  justify-content: center;
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: translate(100%, 50%);
+  size: 2rem;
+
+  @media (max-width: 900px) {
+    display: flex;
+  }
+
+  label {
+    cursor: pointer;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    z-index: 999;
+  }
+
+  &-item {
+    background:blue;
+    height: 2px;
+    width: 70%;
+
+    &:before,
+    &:after {
+      content: "";
+      background: blue;     
+      display: block;
+      height: 2px;
+      position: absolute;
+      width: 70%;
+    }
+
+    &:before {
+     top: 20%;
+    }
+
+    &:after {
+      bottom: 20%;
+    }
+  }
+}
+
+#menu__check {
+  display: none;
+}
+
+#menu__check:checked ~ .menu__icon-item {
+  background: transparent;
+}
+
+#menu__check:checked ~ .menu__icon-item::before {
+  transform: rotateZ(45deg);
+  top: auto;
+}
+
+#menu__check:checked ~ .menu__icon-item::after {
+  transform: rotateZ(-45deg);
+  bottom: auto;
+}
+
+.menu {
+  background: white;
+  box-shadow: 0px 4px 8px rgba(153, 177, 195, 0.08);
+  min-width: 28rem;  
+  position: relative;
+
+  @media (max-width: 900px) {
+    background: rgba(255, 255, 255, 0.9);    
+    height: 100%;
+    position: absolute;
+    left: -100%;
+    transition: .5s;
+    z-index: 9;
+
+    &--visible {
+      left: 0;
+    }
+  }
+  
+  &__item {
+    margin: 3rem;
+    margin-bottom: 0;
+    color: gray;
+    cursor: pointer;
+    display: block;
+    padding-left: 3rem;
+    position: relative;
+
+    &:hover {
+      transform: translate(1%);
+      transition: .5s;
+    }
+    
+    &-search:hover {
+      transform: translateX(0);
+    }
+
+    &--active {
+      color: rgb(3, 3, 250);
+    }
+  }
+
+  &__item:before {
+    content: "";
+    display: block;
+    position: absolute;
+    size: 2.3rem;
+    left: 0;
+    top: -20%;
+  }
+
+  &__item:nth-child(1)::before {
+    background: url(../images/decktop-icon.png) center no-repeat;
+    background-size: contain;
+  }
+
+  &__item:nth-child(2)::before {
+    background: url(../images/home-icon.png) center no-repeat;
+    background-size: contain;
+  }  
+
+  &__item:nth-child(3)::before {
+    background: url(../images/abonent-icon.png) center no-repeat;
+    background-size: contain;
+  }
+
+  &__item:nth-child(4)::before {
+    background: url(../images/abonent-request-icon.png) center no-repeat;
+    background-size: contain;
+  }
+  
+  &__item:nth-child(5)::before {
+    background: url(../images/glas-icon.png) center no-repeat;
+    background-size: contain;
+  }
+}
+
+.search-form {
+  border: none;
+  font-size: 1.6rem;
+  width: 80%;
+
+  &:focus {
+    border: none;
+    border-bottom: 1px solid grey;
+    outline: none;
+  }
+}
